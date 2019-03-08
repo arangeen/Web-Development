@@ -167,7 +167,7 @@
                 float: left;
             }
 
-            #article-summary img {
+            .clock {
                 height: 15px;
                 position: relative;
                 top: 2px;
@@ -201,6 +201,47 @@
 
                 border-top : 1px solid  #a91717;
                 width : 50px; 
+            }
+
+            #watch-listen {
+
+                margin-left: 20px;
+                width: 250px;
+                float: right; 
+
+            }
+
+            h4 {
+                font-weight: normal;
+                font-size: 20px;
+            }
+
+            .article-side-image {
+                float: left;
+                width: 90px; 
+                margin-right: 10px;
+            }
+
+            #watch-listen-link {
+
+                text-decoration: none;
+                color : black;
+                font-weight: bold;
+                font-size: 18px; 
+
+            }
+
+            #watch-listen-link :hover {
+                color: blue ;
+
+            }
+
+            .side-article {
+                float: right; 
+                width: 150px; 
+                position: relative; 
+                top: -15px;
+
             }
 
         </style> 
@@ -331,11 +372,11 @@
 
                         <p> Facebook removes more than 130 "inauthentic" accounts, pages and groups operated from the UK. </p>
 
-                        <p> <img src = "images /clock-image.png"> 7 March, 2019 | <a id = "topic-link" href = "">Technology</a></p>
+                        <p> <img class = "clock" src = "images /clock-image.png"> 7 March, 2019 | <a id = "topic-link" href = "">Technology</a></p>
 
                         <hr id = "article-hr" align = "left"> 
 
-                        <p> <a  href = "">Facebook and Twitter expose fake accounts</a></p>
+                        <p> <a  class = "watch-listen-link" href = "">Facebook and Twitter expose fake accounts</a></p>
 
 
                     </div>
@@ -345,6 +386,21 @@
                 </div>
 
 
+            </div>
+            
+
+            <div id= "watch-listen">
+
+                <h4>Watch/Listen</h4>
+
+                <div class = "side-article">
+
+                    <img class = "article-side-image" src = "images /watch-listen-1.png">  
+                    <a class = "watch-listen-link" href = ""> Autonomous bus trialled in Singapore</a>
+
+                    <p> <img class = "clock" src = "images /clock-image.png"> 7 March, 2019 | <a id = "topic-link" href = "">Technology</a></p>
+
+                 </div>
             </div>
 
         </div>
