@@ -8,6 +8,7 @@
             width: 200px; 
             height: 200px; 
             background-color: red; 
+            display: none; 
         }
 
 
@@ -26,6 +27,13 @@
     <script type="text/Javascript">
     
         var startTime = new Date().getTime();
+
+        function makeShapeAppear() {
+            document.getElementById.style.display = "block";
+            startTime = new Date().getTime();
+        }
+        setTimeout(makeShapeAppear, 1000);
+
         document.getElementById("shape").onclick = function() {
             document.getElementById("shape").style.display = "none";
             var endTime = new Date().getTime();
