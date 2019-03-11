@@ -20,13 +20,19 @@
 </head>
 
 <body>
-
+    <p>Your time: <span id= "timeTaken"></span></p>
     <div id="shape">  </div>
 
     <script type="text/Javascript">
     
-    
+        var startTime = new Date().getTime();
+        document.getElementById("shape").onclick = function() {
+            document.getElementById("shape").style.display = "none";
+            var endTime = new Date().getTime();
+            var timeTaken = (endTime - startTime) / 1000 ; 
+            document.getElementById("timeTaken").innerHTML = timeTaken + "s";
 
+        }
     
     
     
