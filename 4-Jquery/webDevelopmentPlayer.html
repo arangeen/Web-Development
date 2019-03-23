@@ -56,6 +56,12 @@
             border-right: 1px solid gray; 
         }
 
+        .active {
+            background-color: lightblue; 
+
+        }
+
+
 
 
     </style>
@@ -71,18 +77,40 @@
         </div>
 
         <div id="buttonContainer">
-            <div class="toggleButton" id="html">HTML</div>
+            <div class="toggleButton active" id="html">HTML</div>
             <div class="toggleButton" id="css">CSS</div>
             <div class="toggleButton" id="javascript">Javascript</div> 
-            <div class="toggleButton" id="output">Output</div>
+            <div class="toggleButton active" id="output">Output</div>
         </div>
 
 
     </div>
 
+    <div id="bodyContainer">
+
+
+
+
+        
+    </div>
+
     <script type="text/javascript">
     
-    
+        $(".toggleButton").hover(function() {
+
+            // change background color of button you are hovering over to darker color 
+            $(this).css("background-color" , "grey");
+        
+        } , function() {
+            // change color back when you stop hovering over button
+            $(this).css("backgorund-color" , "EEEEEE");
+        }); 
+           
+        $("toggleButton").click(function() {
+            $(this).toggleClass("active"); 
+            
+        })
+         
     
     
     </script>
