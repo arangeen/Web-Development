@@ -61,8 +61,26 @@
 
         }
 
+        textarea {
+            width: 50%; 
+            resize: none; 
 
 
+        }
+
+        .panel{
+            float: left;
+            width: 40%;
+        }
+
+        iframe {
+            border: none; 
+
+        }
+
+        .hidden {
+            display: none; 
+        }
 
     </style>
     
@@ -87,11 +105,15 @@
     </div>
 
     <div id="bodyContainer">
+    
+        <textarea id="htmlPanel" class="panel">Hello World!</textarea>
+        <textarea id="cssPanel" class="panel hidden">p {color : green; }</textarea>
+        <textarea id="javascriptPanel" class="panel hidden"></textarea>
+ 
+        <iframe id="outputPanel"  class="panel"></iframe>
 
 
 
-
-        
     </div>
 
     <script type="text/javascript">
@@ -109,7 +131,19 @@
         $("toggleButton").click(function() {
             $(this).toggleClass("active"); 
             
-        })
+        });
+
+        $(".panel").height($(windown).height() - $("#header").height() - 15);
+        $(".panel").width($(windown).width() / 2) - 10;
+        
+        // set value of output to whatever is on html
+        $("ifrmae").contents().find("html").html($("#htmlPanel").val());
+
+        // change output when you put new text on html
+        $("textarea").on('change keyup paste' , function() {
+            $("iframe").contents().find("html").html($("#htmlPanel").val());
+        });
+
          
     
     
